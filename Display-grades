@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+void input2D_rand(char *a,int r ,int c){
+    int i,j;
+
+    for(i = 0; i < r; i = i + 1){
+        for(j = 0 ; j < c; j = j + 1){
+            cout<<"Enter input: "; 
+            cin>> *(a + i * c + j);
+        }
+        cout<<endl;
+    }
+    
+}
+// Initializing elements of matrix mult to 0.
+void Initialize(char *a, int r , int c){
+    int i, j ;
+    for(i = 0; i < r; i = i + 1){
+        for(j = 0; j < c; j = j + 1){
+           *(a + i * c + j)= '0';
+        }
+    }
+}
+
+void print2D( char *a, int r, int c){
+    int i,j;
+    cout << endl << "Output Matrix: " << endl;
+    for(i = 0; i < r; ++i){
+        for(j = 0; j < c; ++j){
+            if(*(a + i * c + j) != '0'){
+            cout << "|" << *(a + i * c + j)<<"|";
+            }
+        }
+        cout<<endl;
+    }
+}
+int main()
+{
+    int r1, c1;
+    
+    cout << "Enter rows and columns for first matrix: ";
+    cin >> r1 >> c1;
+    
+    char *x = new char[r1*c1];
+    
+
+    //Initialize(x,r1,c1);
+    input2D_rand(x,r1,c1);
+    print2D(x,r1,c1);
+    delete [] x;
+    return 0;
+}
+
+
