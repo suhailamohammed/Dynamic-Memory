@@ -1,3 +1,4 @@
+//display the results
 #include <iostream>
 using namespace std;
 void input2D_rand(char *a,int r ,int c){
