@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+struct point{
+    float x;
+    float y;
+};
+ 
+int main(){
+     point *s = new point;
+     point *k = new point;
+     
+     s->x = 4;
+     s->y = 5;
+     k->y = 8;
+     k->x = 10;
+     
+     cout<<"s: x and y = "<<s->x<<"and"<<s->y;
+     cout<<"s: x and y = "<<k->x<<"and"<<k->y;
+     cout<<endl;
+     delete s;
+     delete k;
+     
+     cout<<"s: x and y = "<<s->x<<"and"<<s->y;
+    
+}
